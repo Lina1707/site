@@ -1,1 +1,29 @@
 Ich bin Lina Mazzone
+Um HTML und JavaScript in einer Datei zu kombinieren, können Sie einfach ein `<script>`-Tag innerhalb Ihres HTML-Dokuments verwenden. Hier ist ein einfaches Beispiel, das Ihre Anforderungen erfüllt:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Converter</title>
+</head>
+<body>
+    <input type="text" id="inputChar" placeholder="Enter a character">
+    <button onclick="convert()">Convert</button>
+    <div id="result"></div>
+
+    <script>
+        function convert() {
+            var input = document.getElementById("inputChar").value;
+            var asciiCode = input.charCodeAt(0);
+            var binaryCode = asciiCode.toString(2);
+            document.getElementById("result").innerHTML = "ASCII Code: " + asciiCode + "<br>Binary Code: " + binaryCode;
+        }
+    </script>
+</body>
+</html>
+```
+
+Kopieren Sie einfach diesen Code in eine HTML-Datei und öffnen Sie sie in einem Webbrowser. Wenn Sie einen Buchstaben in das Eingabefeld eingeben und auf den "Convert" -Button klicken, wird der ASCII-Code des Buchstabens und seine binäre Darstellung unter dem Eingabefeld angezeigt.
